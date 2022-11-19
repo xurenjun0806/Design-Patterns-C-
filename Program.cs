@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Design_Patterns_C_.Patterns.SimpleFactoryPattern;
 using Design_Patterns_C_.Patterns.FactoryMethodPattern;
+using Design_Patterns_C_.Patterns.AbstractFactoryPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -21,3 +22,12 @@ Console.WriteLine(productAFactory.CreateProduct()?.GetProductInfo() ?? "商品�
 
 var productBFactory = new ConcreteFactoryB();
 Console.WriteLine(productBFactory.CreateProduct()?.GetProductInfo() ?? "商品存在しない！");
+
+// 抽象工場
+var appleFactory = new AppleFactory();
+Console.WriteLine(appleFactory.CreatePhone().GetProductInfo());
+Console.WriteLine(appleFactory.CreateWatch().GetProductInfo());
+
+var googleFactory = new GoogleFactory();
+Console.WriteLine(googleFactory.CreatePhone().GetProductInfo());
+Console.WriteLine(googleFactory.CreateWatch().GetProductInfo());
