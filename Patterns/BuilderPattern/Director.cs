@@ -13,7 +13,13 @@ class Director
 
     public Product Constuct()
     {
-        this.m_builder.BuildPart();
+        // 具体的な製造過程はディレクターが知っている(順番も)
+        // 呼び出す側は知らなくてもいい
+        this.m_builder.BuildPartB();
+        this.m_builder.BuildPartB();
+        this.m_builder.BuildPartA();
+        this.m_builder.BuildPartC();
+        
         var product = this.m_builder.GetResult();
         return product;
     }

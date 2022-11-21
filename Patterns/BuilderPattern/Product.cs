@@ -9,26 +9,11 @@ class Product
         this.Parts = new List<string>();
     }
 
-    public void BuildPartA()
-    {
-        this.Parts.Add("部品A");
-    }
-
-    public void BuildPartB()
-    {
-        this.Parts.Add("部品B");
-    }
-
-    public void BuildPartC()
-    {
-        this.Parts.Add("部品C");
-    }
-
     public string GetProductInfo()
     {
         var parts = string.Join(",", this.Parts);
         var result = $"私は「{parts}」で作られている！";
         return result;
     }
-    private List<string> Parts { get; set;}
+    public List<string> Parts { get; set;}
 }

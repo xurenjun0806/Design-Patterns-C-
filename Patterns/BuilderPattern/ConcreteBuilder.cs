@@ -5,13 +5,19 @@ namespace Design_Patterns_C_.Patterns.BuilderPattern;
 class ConcreteBuilder : Builder
 {
     private Product m_product = new Product();
-    public override void BuildPart()
+    public override void BuildPartA()
     {
-        // 具体的な製造過程はビルダーが知っている(順番も)
-        // 呼び出す側は知らなくてもいい
-        this.m_product.BuildPartB();
-        this.m_product.BuildPartC();
-        this.m_product.BuildPartA();
+        this.m_product.Parts.Add("部品A");
+    }
+
+    public override void BuildPartB()
+    {
+        this.m_product.Parts.Add("部品B");
+    }
+
+    public override void BuildPartC()
+    {
+        this.m_product.Parts.Add("部品C");
     }
 
     public override Product GetResult()
