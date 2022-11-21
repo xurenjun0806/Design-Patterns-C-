@@ -2,6 +2,7 @@
 using Design_Patterns_C_.Patterns.SimpleFactoryPattern;
 using Design_Patterns_C_.Patterns.FactoryMethodPattern;
 using Design_Patterns_C_.Patterns.AbstractFactoryPattern;
+using Design_Patterns_C_.Patterns.BuilderPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -31,3 +32,9 @@ Console.WriteLine(appleFactory.CreateWatch().GetProductInfo());
 var googleFactory = new GoogleFactory();
 Console.WriteLine(googleFactory.CreatePhone().GetProductInfo());
 Console.WriteLine(googleFactory.CreateWatch().GetProductInfo());
+
+// ビルダー・パターン
+var builder = new ConcreteBuilder();
+var director = new Director(builder);
+var product = director.Constuct();
+System.Console.WriteLine(product.GetProductInfo());
