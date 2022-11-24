@@ -4,6 +4,7 @@ using Design_Patterns_C_.CreationalPatterns.FactoryMethodPattern;
 using Design_Patterns_C_.CreationalPatterns.AbstractFactoryPattern;
 using Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 using Design_Patterns_C_.CreationalPatterns.SingletonPattern;
+using Design_Patterns_C_.CreationalPatterns.PrototypePattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -45,3 +46,16 @@ var singleton1 = Singleton.GetInstance();
 var singleton2 = Singleton.GetInstance();
 System.Console.WriteLine(Object.ReferenceEquals(singleton1, singleton2));
 System.Console.WriteLine(singleton1.Name);
+
+// プロトタイプ
+var prototypeA = new ConcretePrototypeA(1, "プロトタイプA");
+var cloneA = prototypeA.Clone();
+System.Console.WriteLine(Object.ReferenceEquals(prototypeA, cloneA));
+System.Console.WriteLine($"A 本体:{prototypeA.ToString()}");
+System.Console.WriteLine($"A Clone体:{cloneA.ToString()}");
+
+var prototypeB = new ConcretePrototypeB("本体！", "私は本体！！");
+var cloneB = prototypeB.Clone();
+System.Console.WriteLine(Object.ReferenceEquals(prototypeB, cloneB));
+System.Console.WriteLine($"B 本体:{prototypeB.ToString()}");
+System.Console.WriteLine($"B Clone体:{cloneB.ToString()}");
