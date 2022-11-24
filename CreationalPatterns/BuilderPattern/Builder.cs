@@ -1,6 +1,6 @@
 // 抽象ビルダー
 
-namespace Design_Patterns_C_.Patterns.BuilderPattern;
+namespace Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 
 abstract class Builder
 {

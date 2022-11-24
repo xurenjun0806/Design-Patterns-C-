@@ -1,6 +1,6 @@
 // Apple商品工場
 
-namespace Design_Patterns_C_.Patterns.AbstractFactoryPattern;
+namespace Design_Patterns_C_.CreationalPatterns.AbstractFactoryPattern;
 
 class AppleFactory : IFactory
 {

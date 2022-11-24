@@ -1,6 +1,6 @@
 // Apple携帯商品
 
-namespace Design_Patterns_C_.Patterns.AbstractFactoryPattern;
+namespace Design_Patterns_C_.CreationalPatterns.AbstractFactoryPattern;
 
 class ApplePhone : IProductPhone
 {

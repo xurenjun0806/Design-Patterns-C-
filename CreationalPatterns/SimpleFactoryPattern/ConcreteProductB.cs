@@ -1,6 +1,6 @@
 // 具体的な商品B
 
-namespace Design_Patterns_C_.Patterns.SimpleFactoryPattern
+namespace Design_Patterns_C_.CreationalPatterns.SimpleFactoryPattern
 {
     class ConcreteProductB : IProduct
     {

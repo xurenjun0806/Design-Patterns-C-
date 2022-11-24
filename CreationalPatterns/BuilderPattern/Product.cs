@@ -1,6 +1,6 @@
 // 製造対象商品
 
-namespace Design_Patterns_C_.Patterns.BuilderPattern;
+namespace Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 
 class Product
 {

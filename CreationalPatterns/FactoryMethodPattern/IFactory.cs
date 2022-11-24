@@ -1,6 +1,6 @@
 // 工場インターフェース
 
-namespace Design_Patterns_C_.Patterns.FactoryMethodPattern
+namespace Design_Patterns_C_.CreationalPatterns.FactoryMethodPattern
 {
     interface IFactory
     {

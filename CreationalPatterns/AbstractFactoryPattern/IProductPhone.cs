@@ -1,6 +1,6 @@
 // 携帯商品インターフェース
 
-namespace Design_Patterns_C_.Patterns.AbstractFactoryPattern;
+namespace Design_Patterns_C_.CreationalPatterns.AbstractFactoryPattern;
 
 interface IProductPhone
 {

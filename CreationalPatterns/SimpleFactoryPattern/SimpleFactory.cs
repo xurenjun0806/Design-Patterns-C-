@@ -1,6 +1,6 @@
 // 工場クラス
 
-namespace Design_Patterns_C_.Patterns.SimpleFactoryPattern
+namespace Design_Patterns_C_.CreationalPatterns.SimpleFactoryPattern
 {
     class SimpleFactory
     {

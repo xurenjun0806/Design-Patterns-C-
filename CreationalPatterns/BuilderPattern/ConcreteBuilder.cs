@@ -1,6 +1,6 @@
 // 具体的なビルダー
 
-namespace Design_Patterns_C_.Patterns.BuilderPattern;
+namespace Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 
 class ConcreteBuilder : Builder
 {

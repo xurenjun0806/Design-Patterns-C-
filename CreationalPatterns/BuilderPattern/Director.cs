@@ -1,6 +1,6 @@
 // ディレクター
 
-namespace Design_Patterns_C_.Patterns.BuilderPattern;
+namespace Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 
 class Director
 {

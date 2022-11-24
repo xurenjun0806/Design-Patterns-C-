@@ -1,8 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Design_Patterns_C_.Patterns.SimpleFactoryPattern;
-using Design_Patterns_C_.Patterns.FactoryMethodPattern;
-using Design_Patterns_C_.Patterns.AbstractFactoryPattern;
-using Design_Patterns_C_.Patterns.BuilderPattern;
+using Design_Patterns_C_.CreationalPatterns.SimpleFactoryPattern;
+using Design_Patterns_C_.CreationalPatterns.FactoryMethodPattern;
+using Design_Patterns_C_.CreationalPatterns.AbstractFactoryPattern;
+using Design_Patterns_C_.CreationalPatterns.BuilderPattern;
+using Design_Patterns_C_.CreationalPatterns.SingletonPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -38,3 +39,9 @@ var builder = new ConcreteBuilder();
 var director = new Director(builder);
 var product = director.Constuct();
 System.Console.WriteLine(product.GetProductInfo());
+
+// シングルトン
+var singleton1 = Singleton.GetInstance();
+var singleton2 = Singleton.GetInstance();
+System.Console.WriteLine(Object.ReferenceEquals(singleton1, singleton2));
+System.Console.WriteLine(singleton1.Name);
