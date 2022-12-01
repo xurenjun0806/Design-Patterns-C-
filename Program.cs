@@ -5,6 +5,7 @@ using Design_Patterns_C_.CreationalPatterns.AbstractFactoryPattern;
 using Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 using Design_Patterns_C_.CreationalPatterns.SingletonPattern;
 using Design_Patterns_C_.CreationalPatterns.PrototypePattern;
+using Design_Patterns_C_.StructuralPatterns.AdapterPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -59,3 +60,10 @@ var cloneB = prototypeB.Clone();
 System.Console.WriteLine(Object.ReferenceEquals(prototypeB, cloneB));
 System.Console.WriteLine($"B 本体:{prototypeB.ToString()}");
 System.Console.WriteLine($"B Clone体:{cloneB.ToString()}");
+
+// Adapter
+var classAdapter = new ClassAdapter();
+System.Console.WriteLine(classAdapter.RequiredMethod());
+
+var objectAdapter = new ObjectAdapter();
+System.Console.WriteLine(objectAdapter.RequiredMethod());
