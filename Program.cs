@@ -6,6 +6,7 @@ using Design_Patterns_C_.CreationalPatterns.BuilderPattern;
 using Design_Patterns_C_.CreationalPatterns.SingletonPattern;
 using Design_Patterns_C_.CreationalPatterns.PrototypePattern;
 using Design_Patterns_C_.StructuralPatterns.AdapterPattern;
+using Design_Patterns_C_.StructuralPatterns.BridgePattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -67,3 +68,12 @@ System.Console.WriteLine(classAdapter.RequiredMethod());
 
 var objectAdapter = new ObjectAdapter();
 System.Console.WriteLine(objectAdapter.RequiredMethod());
+
+// Bridge パターン
+var ImplementorA = new ConcreateImplementorA(); 
+var refinedAbstractionA = new RefinedAbstraction(ImplementorA);
+refinedAbstractionA.Operation();
+
+var ImplementorB = new ConcreateImplementorB();
+var refinedAbstractionB = new RefinedAbstraction(ImplementorB);
+refinedAbstractionB.Operation();
