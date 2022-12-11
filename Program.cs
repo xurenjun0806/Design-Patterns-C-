@@ -7,6 +7,7 @@ using Design_Patterns_C_.CreationalPatterns.SingletonPattern;
 using Design_Patterns_C_.CreationalPatterns.PrototypePattern;
 using Design_Patterns_C_.StructuralPatterns.AdapterPattern;
 using Design_Patterns_C_.StructuralPatterns.BridgePattern;
+using Design_Patterns_C_.StructuralPatterns.CompositePattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -77,3 +78,31 @@ refinedAbstractionA.Operation();
 var ImplementorB = new ConcreateImplementorB();
 var refinedAbstractionB = new RefinedAbstraction(ImplementorB);
 refinedAbstractionB.Operation();
+
+// Compositeパターン
+var root = new FolderComponent("root")
+.AddComponent(
+    new FolderComponent("home")
+    .AddComponent(new FileComponent("home_file1.txt"))
+    .AddComponent(new FileComponent("home_file2.txt"))
+    .AddComponent(
+        new FolderComponent("home2")
+        .AddComponent(new FileComponent("home2_file1.exe"))
+    )
+)
+.AddComponent(
+    new FolderComponent("etc")
+    .AddComponent(new FileComponent("etc_file1.txt"))
+    .AddComponent(
+        new FolderComponent("etc2")
+        .AddComponent(
+            new FolderComponent("etc3")
+            .AddComponent(new FileComponent("etc3_file1.txt"))
+        )
+    )
+)
+.AddComponent(
+    new FolderComponent("tmp")
+);
+
+root.PrintInfo(0);
