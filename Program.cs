@@ -8,6 +8,7 @@ using Design_Patterns_C_.CreationalPatterns.PrototypePattern;
 using Design_Patterns_C_.StructuralPatterns.AdapterPattern;
 using Design_Patterns_C_.StructuralPatterns.BridgePattern;
 using Design_Patterns_C_.StructuralPatterns.CompositePattern;
+using Design_Patterns_C_.StructuralPatterns.DecoratorPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -106,3 +107,9 @@ var root = new FolderComponent("root")
 );
 
 root.PrintInfo(0);
+
+// Decoratorパターン
+var primePrice = new PrimePrice(100);
+System.Console.WriteLine($"原価は{primePrice.GetPrice()}");
+var doublePrice = new DoublePrice(primePrice);
+System.Console.WriteLine($"二倍価格は{doublePrice.GetPrice()}");
