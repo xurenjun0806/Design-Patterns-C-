@@ -9,6 +9,7 @@ using Design_Patterns_C_.StructuralPatterns.AdapterPattern;
 using Design_Patterns_C_.StructuralPatterns.BridgePattern;
 using Design_Patterns_C_.StructuralPatterns.CompositePattern;
 using Design_Patterns_C_.StructuralPatterns.DecoratorPattern;
+using Design_Patterns_C_.StructuralPatterns.FacadePattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -113,3 +114,8 @@ var primePrice = new PrimePrice(100);
 System.Console.WriteLine($"原価は{primePrice.GetPrice()}");
 var doublePrice = new DoublePrice(primePrice);
 System.Console.WriteLine($"二倍価格は{doublePrice.GetPrice()}");
+
+// Facadeパターン
+var shapeFacade = new ShapeMaker();
+shapeFacade.DrawCircle();
+shapeFacade.DrawSquare();
