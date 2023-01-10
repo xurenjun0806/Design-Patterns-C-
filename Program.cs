@@ -10,6 +10,7 @@ using Design_Patterns_C_.StructuralPatterns.BridgePattern;
 using Design_Patterns_C_.StructuralPatterns.CompositePattern;
 using Design_Patterns_C_.StructuralPatterns.DecoratorPattern;
 using Design_Patterns_C_.StructuralPatterns.FacadePattern;
+using Design_Patterns_C_.StructuralPatterns.FlyweightPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -119,3 +120,12 @@ System.Console.WriteLine($"二倍価格は{doublePrice.GetPrice()}");
 var shapeFacade = new ShapeMaker();
 shapeFacade.DrawCircle();
 shapeFacade.DrawSquare();
+
+// Flyweightパターン
+var yellowCircle = ShapeFactory.GetCircle("黄色い");
+yellowCircle.Draw();
+var redCircle = ShapeFactory.GetCircle("赤色");
+redCircle.Draw();
+var yellowCircle2 = ShapeFactory.GetCircle("黄色い");
+yellowCircle2.Draw();
+
