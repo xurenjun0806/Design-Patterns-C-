@@ -11,6 +11,7 @@ using Design_Patterns_C_.StructuralPatterns.CompositePattern;
 using Design_Patterns_C_.StructuralPatterns.DecoratorPattern;
 using Design_Patterns_C_.StructuralPatterns.FacadePattern;
 using Design_Patterns_C_.StructuralPatterns.FlyweightPattern;
+using Design_Patterns_C_.StructuralPatterns.ProxyPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -129,3 +130,10 @@ redCircle.Draw();
 var yellowCircle2 = ShapeFactory.GetCircle("黄色い");
 yellowCircle2.Draw();
 
+// Proxyパターン
+var image = new ProxyImage(@"C:\Image\画像.jpg");
+
+// 初回は画像をディスクからロードする
+image.Display();
+// 二回目は画像のロードが必要ない
+image.Display();
