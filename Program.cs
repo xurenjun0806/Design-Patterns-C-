@@ -12,6 +12,8 @@ using Design_Patterns_C_.StructuralPatterns.DecoratorPattern;
 using Design_Patterns_C_.StructuralPatterns.FacadePattern;
 using Design_Patterns_C_.StructuralPatterns.FlyweightPattern;
 using Design_Patterns_C_.StructuralPatterns.ProxyPattern;
+using Design_Patterns_C_.BehavioralPatterns.ChainOfResponsibilityPattern;
+
 
 Console.WriteLine("Hello, World!");
 
@@ -137,3 +139,14 @@ var image = new ProxyImage(@"C:\Image\画像.jpg");
 image.Display();
 // 二回目は画像のロードが必要ない
 image.Display();
+
+// Chain-of-responsibility パターン
+var debug = new DebugLogger();
+var info = new InfoLogger();
+var error = new ErrorLogger();
+debug.SetNextLogger(info);
+info.SetNextLogger(error);
+
+debug.LogMessage(AbstractLogger.LOG_LEVEL_DEBUG, "DEBUGレベルのメッセージ");
+debug.LogMessage(AbstractLogger.LOG_LEVEL_INFO, "INFOレベルのメッセージ");
+debug.LogMessage(AbstractLogger.LOG_LEVEL_ERROR, "ERRORレベルのメッセージ");
