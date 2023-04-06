@@ -13,7 +13,7 @@ using Design_Patterns_C_.StructuralPatterns.FacadePattern;
 using Design_Patterns_C_.StructuralPatterns.FlyweightPattern;
 using Design_Patterns_C_.StructuralPatterns.ProxyPattern;
 using Design_Patterns_C_.BehavioralPatterns.ChainOfResponsibilityPattern;
-
+using Design_Patterns_C_.BehavioralPatterns.CommandPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -150,3 +150,15 @@ info.SetNextLogger(error);
 debug.LogMessage(AbstractLogger.LOG_LEVEL_DEBUG, "DEBUGレベルのメッセージ");
 debug.LogMessage(AbstractLogger.LOG_LEVEL_INFO, "INFOレベルのメッセージ");
 debug.LogMessage(AbstractLogger.LOG_LEVEL_ERROR, "ERRORレベルのメッセージ");
+
+// Command パターン
+var stock = new Stock("テスラ", 100);
+var buyStock = new BuyStock(stock);
+var sellStock = new SellStock(stock);
+
+var broker = new Broker();
+broker.TakeOrder(buyStock);
+broker.TakeOrder(buyStock);
+broker.TakeOrder(sellStock);
+
+broker.PlaceOrders();
