@@ -14,6 +14,7 @@ using Design_Patterns_C_.StructuralPatterns.FlyweightPattern;
 using Design_Patterns_C_.StructuralPatterns.ProxyPattern;
 using Design_Patterns_C_.BehavioralPatterns.ChainOfResponsibilityPattern;
 using Design_Patterns_C_.BehavioralPatterns.CommandPattern;
+using Design_Patterns_C_.BehavioralPatterns.InterpreterPattern;
 
 Console.WriteLine("Hello, World!");
 
@@ -162,3 +163,9 @@ broker.TakeOrder(buyStock);
 broker.TakeOrder(sellStock);
 
 broker.PlaceOrders();
+
+// Interpreter パターン
+// 逆ポーランド記法
+var context = "42 4 2 - +";
+var parser = new Parser(context);
+System.Console.WriteLine(parser.Evaluate());
